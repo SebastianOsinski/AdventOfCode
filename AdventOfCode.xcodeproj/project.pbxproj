@@ -12,6 +12,7 @@
 		9143B6561C10B242008214DD /* day1_input in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9143B6511C10B1B2008214DD /* day1_input */; };
 		9143B6581C10B6D5008214DD /* day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B6571C10B6D5008214DD /* day2.swift */; };
 		9143B65A1C10B72C008214DD /* day2_input in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9143B6591C10B6E1008214DD /* day2_input */; };
+		9143B65D1C118E00008214DD /* day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B65C1C118E00008214DD /* day4.swift */; };
 		9143B6601C118EFE008214DD /* String+md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B65F1C118EFE008214DD /* String+md5.swift */; };
 		91469C451C108F1400E97658 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91469C441C108F1400E97658 /* main.swift */; };
 		91CE73941C109835006A5E14 /* day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE73931C109835006A5E14 /* day3.swift */; };
@@ -37,6 +38,7 @@
 		9143B6521C10B1C5008214DD /* day1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day1.swift; sourceTree = "<group>"; };
 		9143B6571C10B6D5008214DD /* day2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day2.swift; sourceTree = "<group>"; };
 		9143B6591C10B6E1008214DD /* day2_input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day2_input; sourceTree = "<group>"; };
+		9143B65C1C118E00008214DD /* day4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day4.swift; sourceTree = "<group>"; };
 		9143B65F1C118EFE008214DD /* String+md5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+md5.swift"; sourceTree = "<group>"; };
 		9143B6611C119067008214DD /* AdventOfCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdventOfCode-Bridging-Header.h"; sourceTree = "<group>"; };
 		91469C411C108F1400E97658 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
