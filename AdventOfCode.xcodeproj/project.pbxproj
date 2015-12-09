@@ -14,6 +14,8 @@
 		9143B65A1C10B72C008214DD /* day2_input in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9143B6591C10B6E1008214DD /* day2_input */; };
 		9143B65D1C118E00008214DD /* day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B65C1C118E00008214DD /* day4.swift */; };
 		9143B6601C118EFE008214DD /* String+md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B65F1C118EFE008214DD /* String+md5.swift */; };
+		9143B6651C13385D008214DD /* day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9143B6641C13385D008214DD /* day5.swift */; };
+		9143B6661C13395B008214DD /* day5_input in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9143B6631C133799008214DD /* day5_input */; };
 		91469C451C108F1400E97658 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91469C441C108F1400E97658 /* main.swift */; };
 		91CE73941C109835006A5E14 /* day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE73931C109835006A5E14 /* day3.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				9143B6661C13395B008214DD /* day5_input in CopyFiles */,
 				9143B65A1C10B72C008214DD /* day2_input in CopyFiles */,
 				9143B6561C10B242008214DD /* day1_input in CopyFiles */,
 				9143B6541C10B1FA008214DD /* day3_input in CopyFiles */,
@@ -41,6 +44,8 @@
 		9143B65C1C118E00008214DD /* day4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day4.swift; sourceTree = "<group>"; };
 		9143B65F1C118EFE008214DD /* String+md5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+md5.swift"; sourceTree = "<group>"; };
 		9143B6611C119067008214DD /* AdventOfCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdventOfCode-Bridging-Header.h"; sourceTree = "<group>"; };
+		9143B6631C133799008214DD /* day5_input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day5_input; sourceTree = "<group>"; };
+		9143B6641C13385D008214DD /* day5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day5.swift; sourceTree = "<group>"; };
 		91469C411C108F1400E97658 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		91469C441C108F1400E97658 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		91CE73921C109835006A5E14 /* day3_input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day3_input; sourceTree = "<group>"; };
@@ -68,6 +73,16 @@
 			path = "AdventOfCode/Day 4";
 			sourceTree = SOURCE_ROOT;
 		};
+		9143B6621C13377D008214DD /* Day 5 */ = {
+			isa = PBXGroup;
+			children = (
+				9143B6631C133799008214DD /* day5_input */,
+				9143B6641C13385D008214DD /* day5.swift */,
+			);
+			name = "Day 5";
+			path = "AdventOfCode/Day 5";
+			sourceTree = SOURCE_ROOT;
+		};
 		91469C381C108F1400E97658 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,7 @@
 		91469C431C108F1400E97658 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
+				9143B6621C13377D008214DD /* Day 5 */,
 				9143B65B1C118DD8008214DD /* Day 4 */,
 				91CE73971C10992A006A5E14 /* Day 3 */,
 				91CE73961C10991E006A5E14 /* Day 2 */,
@@ -198,6 +214,7 @@
 				9143B65D1C118E00008214DD /* day4.swift in Sources */,
 				91469C451C108F1400E97658 /* main.swift in Sources */,
 				9143B6601C118EFE008214DD /* String+md5.swift in Sources */,
+				9143B6651C13385D008214DD /* day5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
