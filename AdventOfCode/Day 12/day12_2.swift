@@ -20,7 +20,7 @@ func sumWithoutRed(json: JSON, inout sum: Int) {
         return
     }
     if let jsonDict = json.dictionary where !jsonDict.values.contains("red") {
-        for (_, subJson) in jsonDict {
+        for subJson in jsonDict.values {
             sumWithoutRed(subJson, sum: &sum)
         }
     }
