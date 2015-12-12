@@ -8,7 +8,7 @@
 
 import Foundation
 
-func day12() {
+func day12_1() {
     let inputPath = NSBundle.mainBundle().pathForResource("day12_input", ofType: "json")
     let json = try! String(contentsOfFile: inputPath!)
     
