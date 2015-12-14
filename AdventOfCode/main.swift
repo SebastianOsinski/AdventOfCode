@@ -8,4 +8,4 @@
 
 import Foundation
 
-day14_1()
+day14_2()
