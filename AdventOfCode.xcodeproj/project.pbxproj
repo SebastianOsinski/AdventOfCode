@@ -31,6 +31,8 @@
 		91B271471C18C3A000E16115 /* day6_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B271461C18C3A000E16115 /* day6_2.swift */; };
 		91C3EA901C1B39ED00755F09 /* day8_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3EA8F1C1B39ED00755F09 /* day8_2.swift */; };
 		91CE73941C109835006A5E14 /* day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE73931C109835006A5E14 /* day3.swift */; };
+		91FC895C1C204C0800B230A2 /* day15_input in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91FC895B1C204BFD00B230A2 /* day15_input */; };
+		91FC895E1C204C1300B230A2 /* day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FC895D1C204C1300B230A2 /* day15.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				91FC895C1C204C0800B230A2 /* day15_input in CopyFiles */,
 				913F93491C1EEB580056D2FE /* day14_input in CopyFiles */,
 				913DFDCC1C1CAFC5000DFFFE /* day12_input.json in CopyFiles */,
 				9145BA0F1C1977F200AE7B3C /* day8_input in CopyFiles */,
@@ -80,6 +83,8 @@
 		91C3EA8F1C1B39ED00755F09 /* day8_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day8_2.swift; sourceTree = "<group>"; };
 		91CE73921C109835006A5E14 /* day3_input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day3_input; sourceTree = "<group>"; };
 		91CE73931C109835006A5E14 /* day3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day3.swift; sourceTree = "<group>"; };
+		91FC895B1C204BFD00B230A2 /* day15_input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day15_input; sourceTree = "<group>"; };
+		91FC895D1C204C1300B230A2 /* day15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day15.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +179,7 @@
 		91469C431C108F1400E97658 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
+				91FC895A1C204BE300B230A2 /* Day 15 */,
 				913F93451C1EEA770056D2FE /* Day 14 */,
 				913DFDC81C1CAE20000DFFFE /* Day 12 */,
 				9145BA091C19723A00AE7B3C /* Day 10 */,
@@ -229,6 +235,16 @@
 			);
 			name = "Day 3";
 			path = "AdventOfCode/Day 3";
+			sourceTree = SOURCE_ROOT;
+		};
+		91FC895A1C204BE300B230A2 /* Day 15 */ = {
+			isa = PBXGroup;
+			children = (
+				91FC895B1C204BFD00B230A2 /* day15_input */,
+				91FC895D1C204C1300B230A2 /* day15.swift */,
+			);
+			name = "Day 15";
+			path = "AdventOfCode/Day 15";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -295,6 +311,7 @@
 				9143B6581C10B6D5008214DD /* day2.swift in Sources */,
 				9145BA111C1977FA00AE7B3C /* day8_1.swift in Sources */,
 				9143B6531C10B1C5008214DD /* day1.swift in Sources */,
+				91FC895E1C204C1300B230A2 /* day15.swift in Sources */,
 				9143B65D1C118E00008214DD /* day4.swift in Sources */,
 				91C3EA901C1B39ED00755F09 /* day8_2.swift in Sources */,
 				913F93481C1EEAD10056D2FE /* day14.swift in Sources */,
