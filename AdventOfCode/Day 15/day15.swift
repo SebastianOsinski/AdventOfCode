@@ -50,6 +50,26 @@ private func getIngredients() -> [Ingredient] {
     return ingredients
 }
 
+private func allArraysWhichSumTo(sum: Int, size: Int) -> [[Int]] {
+    guard size > 0 else {
+        return [[]]
+    }
+    
+    var arrays = [[Int]]()
+    
+    for i in 0...sum {
+        let subarrays = allArraysWhichSumTo(sum - i, size: size - 1)
+        for var subarray in subarrays where subarray.reduce(0, combine: +) == (sum - i) {
+            subarray.insert(i, atIndex: 0)
+            arrays.append(subarray)
+        }
+    }
+    
+    return arrays
+}
+
+
+
 func day15() {
     let ingredients = getIngredients()
     assert(ingredients.count == 4)
@@ -61,30 +81,24 @@ func day15() {
     let calories = ingredients.map { $0.calories }
     
     var maxScore = 0
+    let weightsArray = allArraysWhichSumTo(100, size: ingredients.count)
     
-    for i in 0...100 {
-        for j in 0...(100 - i) {
-            for k in 0...(100 - (i + j)) {
-                let l = (100 - (i + j + k))
-                let weights = [i, j, k, l]
-                
-                let totalCalories = (calories * weights)!
-                
-                if totalCalories != 500 {
-                    continue
-                }
-                
-                let totalCapacity = (capacities * weights).map { $0 >= 0 ? $0 : 0 }!
-                let totalDurability = (durabilities * weights).map { $0 >= 0 ? $0 : 0 }!
-                let totalFlavor = (flavors * weights).map { $0 >= 0 ? $0 : 0 }!
-                let totalTexture = (textures * weights).map { $0 >= 0 ? $0 : 0 }!
-                
-                let score = totalCapacity * totalDurability * totalFlavor * totalTexture
-                
-                if score > maxScore {
-                    maxScore = score
-                }
-            }
+    for weights in weightsArray {
+        let totalCalories = (calories * weights)!
+        
+        if totalCalories != 500 {
+            continue
+        }
+        
+        let totalCapacity = (capacities * weights).map { $0 >= 0 ? $0 : 0 }!
+        let totalDurability = (durabilities * weights).map { $0 >= 0 ? $0 : 0 }!
+        let totalFlavor = (flavors * weights).map { $0 >= 0 ? $0 : 0 }!
+        let totalTexture = (textures * weights).map { $0 >= 0 ? $0 : 0 }!
+        
+        let score = totalCapacity * totalDurability * totalFlavor * totalTexture
+        
+        if score > maxScore {
+            maxScore = score
         }
     }
     
