@@ -68,8 +68,6 @@ private func allArraysWhichSumTo(sum: Int, size: Int) -> [[Int]] {
     return arrays
 }
 
-
-
 func day15() {
     let ingredients = getIngredients()
     assert(ingredients.count == 4)
