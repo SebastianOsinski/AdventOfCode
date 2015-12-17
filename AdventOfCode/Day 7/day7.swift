@@ -20,10 +20,26 @@ struct BinaryGate: Gate {
     let operation: (UInt16, UInt16) -> UInt16
     
     func execute(inout wires: [String: UInt16]) -> Bool {
-        guard let rightValue = wires[rightInputWire], leftValue = wires[leftInputWire] else {
+        var right: UInt16?
+        var left: UInt16?
+        
+        if let rightValue = UInt16(rightInputWire) {
+            right = rightValue
+        } else {
+            right = wires[rightInputWire]
+        }
+        
+        if let leftValue = UInt16(leftInputWire) {
+            left = leftValue
+        } else {
+            left = wires[leftInputWire]
+        }
+        
+        guard right != nil && left != nil else {
             return false
         }
-        wires[outputWire] = operation(rightValue, leftValue)
+        
+        wires[outputWire] = operation(left!, right!)
         
         return true
     }
@@ -91,6 +107,19 @@ private func createGate(instruction: String) -> Gate? {
     }
 }
 
+private func executeCircuit(var gates gates: [Gate?], inout wires: [String: UInt16]) {
+    while !gates.isEmpty {
+        for i in 0..<gates.count {
+            if let gate = gates[i] {
+                if gate.execute(&wires) {
+                    gates[i] = nil
+                }
+            }
+        }
+        gates = gates.filter { $0 != nil }
+    }
+}
+
 func day7() {
     let inputPath = NSBundle.mainBundle().pathForResource("day7_input", ofType: nil)
     let instructions = try! String(contentsOfFile: inputPath!).componentsSeparatedByString("\n")
@@ -99,19 +128,22 @@ func day7() {
     var gates = [Gate?]()
     
     gates = instructions.map { createGate($0) }
-    print(gates.count)
-    while !gates.isEmpty {
-        for i in 0..<gates.count {
-            if let gate = gates[i] {
-                //print(gate.execute(&wires))
-                if gate.execute(&wires) {
-                    //print(gate)
-                    gates[i] = nil
-                }
-            }
-        }
-        gates = gates.filter { $0 != nil }
-        print(gates)
-    }
+   
+    executeCircuit(gates: gates, wires: &wires)
     
+    print(wires["a"])
+    
+    let aValue = wires["a"]!
+    
+    wires = [String: UInt16]()
+    gates = instructions.map { createGate($0) }
+    
+    let bIndex = gates.indexOf { $0 is InsertGate && ($0 as! InsertGate).outputWire == "b" }!
+    
+    gates.removeAtIndex(bIndex)
+    gates.insert(InsertGate(outputWire: "b", value: aValue), atIndex: bIndex)
+    
+    executeCircuit(gates: gates, wires: &wires)
+    
+    print(wires["a"])
 }
