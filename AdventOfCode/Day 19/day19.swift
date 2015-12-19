@@ -32,17 +32,67 @@ func day19_1() {
     var createdMolecules = Set<String>()
     
     for replacement in replacements {
-        let pattern = try! NSRegularExpression(pattern: replacement.from, options: [])
-        let matches = pattern.matchesInString(molecule, options: [], range: NSMakeRange(0, molecule.characters.count))
-        
-        let ranges = matches.map { $0.range }
-        
-        ranges.forEach { (range) -> () in
-            let createdMolecule = (molecule as NSString).stringByReplacingCharactersInRange(range, withString: replacement.to)
-            
-            createdMolecules.insert(createdMolecule)
-        }
+        createdMolecules.unionInPlace(molecule.allStringsByReplacing(replacement.from, withString: replacement.to))
     }
     
     print(createdMolecules.count)
+}
+
+extension String {
+    
+    func allStringsByReplacing(substring: String, withString replacement: String) -> [String] {
+        let pattern = try! NSRegularExpression(pattern: substring, options: [])
+        let matches = pattern.matchesInString(self, options: [], range: NSMakeRange(0, self.characters.count))
+        
+        let ranges = matches.map { $0.range }
+        
+        return ranges.map { (range) -> String in
+            return (self as NSString).stringByReplacingCharactersInRange(range, withString: replacement)
+        }
+    }
+}
+
+
+class MinimumFinder {
+    
+    private var currentMinimum = Int.max
+    private let replacements: [Replacement]
+    private let molecule: String
+    
+    init(molecule: String, replacements: [Replacement]) {
+        self.molecule = molecule
+        self.replacements = replacements
+    }
+    
+    private func finderHelper(molecules: [String], deepness: Int) {
+        guard molecules.count > 0 && deepness < currentMinimum else {
+            return
+        }
+        
+        for molecule in molecules {
+            if molecule == "e" {
+                currentMinimum = deepness
+                print(currentMinimum)
+            }
+            
+            for replacement in replacements {
+                let subMolecules = molecule.allStringsByReplacing(replacement.to, withString: replacement.from)
+                finderHelper(subMolecules, deepness: deepness + 1)
+            }
+        }
+    }
+    
+    func findMinimum() -> Int {
+        finderHelper([molecule], deepness: 0)
+        return currentMinimum
+    }
+}
+
+func day19_2() {
+    let (molecule, replacements) = getMoleculeAndReplacements()
+    let finder = MinimumFinder(molecule: molecule, replacements: replacements)
+    
+    let minimum = finder.findMinimum()
+    
+    print(minimum)
 }
