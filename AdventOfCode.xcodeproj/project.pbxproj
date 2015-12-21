@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911BB35F1C28264100A058A4 /* day21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911BB35E1C28264100A058A4 /* day21.swift */; };
 		9121751B1C24011C003B68B7 /* day18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9121751A1C24011C003B68B7 /* day18.swift */; };
 		9121751C1C240124003B68B7 /* day18_input in CopyFiles */ = {isa = PBXBuildFile; fileRef = 912175191C240113003B68B7 /* day18_input */; };
 		9121751E1C240DCC003B68B7 /* Bool+intValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9121751D1C240DCC003B68B7 /* Bool+intValue.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		911BB35E1C28264100A058A4 /* day21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day21.swift; sourceTree = "<group>"; };
 		912175191C240113003B68B7 /* day18_input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day18_input; sourceTree = "<group>"; };
 		9121751A1C24011C003B68B7 /* day18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = day18.swift; sourceTree = "<group>"; };
 		9121751D1C240DCC003B68B7 /* Bool+intValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+intValue.swift"; sourceTree = "<group>"; };
@@ -143,6 +145,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		911BB35D1C28262A00A058A4 /* Day 21 */ = {
+			isa = PBXGroup;
+			children = (
+				911BB35E1C28264100A058A4 /* day21.swift */,
+			);
+			name = "Day 21";
+			path = "AdventOfCode/Day 21";
+			sourceTree = SOURCE_ROOT;
+		};
 		912175181C2400F0003B68B7 /* Day 18 */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +265,7 @@
 		91469C431C108F1400E97658 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
+				911BB35D1C28262A00A058A4 /* Day 21 */,
 				91265A971C26C81E003DE24D /* Day 20 */,
 				9154E3C51C2567BE001BB527 /* Day 19 */,
 				912175181C2400F0003B68B7 /* Day 18 */,
@@ -453,6 +465,7 @@
 				915655271C2210AA001E7EED /* Array+permutations.swift in Sources */,
 				9121751B1C24011C003B68B7 /* day18.swift in Sources */,
 				91B271451C18B8F900E16115 /* day6_1.swift in Sources */,
+				911BB35F1C28264100A058A4 /* day21.swift in Sources */,
 				913DFDD01C1CB75A000DFFFE /* SwiftyJSON.swift in Sources */,
 				9143B6581C10B6D5008214DD /* day2.swift in Sources */,
 				9145BA111C1977FA00AE7B3C /* day8_1.swift in Sources */,
