@@ -12,7 +12,7 @@ class Warrior {
     
     var hitPoints: Int
     let damage: Int
-    let armor: Int
+    var armor: Int
     
     init(hitPoints: Int, damage: Int, armor: Int) {
         self.hitPoints = hitPoints
